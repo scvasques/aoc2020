@@ -10,7 +10,7 @@ def validLine(line):
 	return (password[p1-1] == letter) != (password[p2-1] == letter)
 
 with open("input.txt", "r") as f:
-    lines = f.readlines()
+	lines = f.readlines()
 count = 0
 for i in lines:
 	if validLine(i):

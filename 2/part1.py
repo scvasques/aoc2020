@@ -11,7 +11,7 @@ def validLine(line):
 	return max >= total and min <= total
 
 with open("input.txt", "r") as f:
-    lines = f.readlines()
+	lines = f.readlines()
 count = 0
 for i in lines:
 	if validLine(i):
