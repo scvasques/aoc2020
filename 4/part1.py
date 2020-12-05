@@ -12,7 +12,7 @@ def passportInfoToMap(passportInfo):
 def isValid(map):
     return all(i in map for i in requiredFields)
 
-with open("test.txt", "r") as f:
+with open("input.txt", "r") as f:
 	lines = f.readlines()
 lines.append("\n")
 passportInfo = ""
