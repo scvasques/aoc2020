@@ -5,7 +5,7 @@ def switchCmd(line):
 	cmd = line.split(" ")[0]
 	return line.replace("nop", "jmp") if cmd == "nop" else line.replace("jmp", "nop")
 
-def executedCorrectly(lines):
+def execute(lines):
 	acc = 0
 	i = 0
 	executed = []
@@ -29,7 +29,7 @@ def main():
 	switchable = [i for i, elem in enumerate(lines) if lines[i].split(" ")[0] in ("jmp", "nop")]
 	for i in switchable:
 		lines[i] = switchCmd(lines[i])
-		res = executedCorrectly(lines)
+		res = execute(lines)
 		if res >= 0:
 			print("Accumulator: " + str(res))
 			exit(0)
